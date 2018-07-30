@@ -1,0 +1,86 @@
+@import "libs"
+@import "base"
+@import "page"
+
+.container
+	max-width: 1140px
+
+.header
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	padding-top: 35px
+	padding-bottom: 245px
+	
+	p
+		font-size: 19px
+		font-weight: 500
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 30px
+
+	&__buttons
+		display: flex
+		justify-content: flex-end
+		align-content: center
+		margin-bottom: 165px
+		a
+			position: relative
+			padding-left: 30px
+			color: #66bd54
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 15px
+			&:hover
+				text-decoration: none
+			&:focus
+				text-decoration: none
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: 3px
+				width: 15px
+				height: 20px
+				background-image: $accent
+				-webkit-transform: skew(20deg)
+				-moz-transform: skew(20deg)
+				-o-transform: skew(20deg)
+			&:first-child
+				margin-right: 65px
+	
+	&__btn
+		position: relative
+		display: inline-block
+		padding: 20px 20px
+		text-transform: uppercase
+		background-color: #fcb800
+		font-size: 21px
+		line-height: 1
+		font-weight: 700
+		color: #fff
+		border-radius: 3px
+		&:hover
+			text-decoration: none
+			color: #fff
+		&:focus
+			text-decoration: none
+			color: #fff
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			right: -21px
+			width: 0
+			height: 0
+			border-radius: 3px
+			border-top: 31px solid transparent
+			border-left: 22px solid #fcb800
+			border-bottom: 31px solid transparent
+
+
+
+
+
+
+@import "media" // Always at the end
