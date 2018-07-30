@@ -26,9 +26,9 @@ body
 	line-height: 1.75
 	font-weight: 400
 
-::selection
-	background-color: $accent
-	color: #fff
+// ::selection
+// 	background-color: $accent
+// 	color: #fff
 
 section
 	overflow: hidden
@@ -46,11 +46,34 @@ h1
 	line-height: 1.2
 	margin-bottom: 15px
 
-
 h2
-	text-align: center
+	display: inline-block
+	position: relative
+	text-transform: uppercase
 	font-size: 40px
-	margin-bottom: 30px
+	margin-bottom: 40px
+	&::before
+		content: ""
+		position: absolute
+		left: -35px
+		top: 20px
+		width: 15px
+		height: 20px
+		background-image: $accent
+		-webkit-transform: skew(20deg)
+		-moz-transform: skew(20deg)
+		-o-transform: skew(20deg)
+	&::after
+		content: ""
+		position: absolute
+		right: -35px
+		top: 20px
+		width: 15px
+		height: 20px
+		background-image: $accent
+		-webkit-transform: skew(-20deg)
+		-moz-transform: skew(-20deg)
+		-o-transform: skew(-20deg)
 
 ul
 	margin: 0
