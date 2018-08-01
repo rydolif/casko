@@ -1,14 +1,103 @@
 
 @media only screen and (max-width : 1200px)
-
 	.header
+		padding-top: 35px
+		padding-bottom: 150px
 
+	.protection
+		&__item
+			margin-right: 3%
+			width: 30%
+
+	.info
+		.header__btn
+			width: 95%
+			padding: 20px 15px
 
 @media only screen and (max-width : 992px)
-	#thanks
+	h1
+		font-size: 40px
+
+	h2
+		font-size: 30px
+		&::before
+			top: 10px
+		&::after
+			top: 10px
+	
+	.steps
+		.namber
+			font-size: 80px
+
+	.protection
+		&__item
+			max-height: 220px
+			min-height: auto
+	
+	.info
+		form
+			div
+				width: 30%
+				margin-right: 3%
+	.info
+		.header__btn
+			font-size: 19px
+
+	.important
+		background-position: 70% 0
+
 
 @media only screen and (max-width : 767px)
+	h2
+		&::before
+			left: -20px
+		&::after
+			right: -20px
+
 	.header
+		padding-bottom: 80px
+		background-position: 40% 0
+		&__buttons
+			margin-bottom: 50px
+			a
+				&:first-child
+					margin-right: 30px
+
+	.section
+		padding: 40px 0
+
+	.important
+		background-position: 90% 0
+		ul
+			margin-bottom: 40px
+
+		li
+			margin-bottom: 10px
+
+		&__footer
+			flex-direction: column
+	
+	.company
+		h2
+			margin-bottom: 40px
+	
+	.protection
+		&__item
+			max-height: 100%
+			min-height: auto
+			width: 47%
+			margin-bottom: 30px
+			&:nth-child(3n)
+				margin-right: 3%
+			&:nth-child(n+3)
+				margin-bottom: 30px
+
+	.document
+		&__list
+			margin: 0
+
+		&__item
+			margin-bottom: 30px
 
 @media only screen and (max-width : 576px)
 	.header

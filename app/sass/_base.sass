@@ -26,10 +26,6 @@ body
 	line-height: 1.75
 	font-weight: 400
 
-// ::selection
-// 	background-color: $accent
-// 	color: #fff
-
 section
 	overflow: hidden
 	
@@ -85,35 +81,38 @@ i
 	font-size: 16px
 	color: #fff
 
-input, textarea
-	border: #808080 1px solid
-	border-radius: 0
+input, textarea, select
+	border: none
+	border-radius: 3px
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
+	background-color: #369658
+	width: 100%
+	color: #fff
 	&:focus:required:invalid
-		border-color: #808080
+		border-color: none
 		outline: none
 		box-shadow: none
 		-webkit-appearance: non
 	&:required:valid
-		border-color: #808080
+		border-color: none
 		outline: none
 		box-shadow: none
 		-webkit-appearance: non
 
 	&::placeholder
-		color: #808080
-		font-size: 12px
-		text-transform: uppercase
+		color: #fff
+		font-size: 19px
+		font-weight: 300
 		line-height: 1
 
-input
-	padding: 15px 25px
-	border-radius: 40px
-	font-weight: 400
-	line-height: 1
-	text-align: center
+select
+	color: #fff
+	font-size: 19px
+	font-weight: 300
+	line-height: 57px
+	padding: 0 20px
 
 b, strong
 	font-weight: 700
