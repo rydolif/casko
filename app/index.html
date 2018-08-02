@@ -10,26 +10,21 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
 
-	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
 
-<!-- 	<div class="preloader">
-		<div class="pulse"></div>
-	</div>
- -->
 	<header class="header" style="background-image: url(img/header-bg.jpg);">
 		<div class="container">
 
 			<div class="header__buttons">
-				<a href="#">Онлайн-калькулятор</a>
-				<a href="#">Страховые компании</a>
+				<a href="#info">Онлайн-калькулятор</a>
+				<a href="#company">Страховые компании</a>
 			</div>
 
 			<h1>Каско в кредит <br>за 5 минут</h1>
 			<p>Для тех, кто не привык полагаться на случай</p>
-			<a href="#" class="header__btn">Оформить каско</a>
+			<a href="#info" class="header__btn">Оформить каско</a>
 
 		</div>
 	</header>
@@ -99,42 +94,37 @@
 		</div>
 	</section>
 
-	<section class="section info" style="background-image: url(img/info-bg.jpg);">
+	<section id="info" class="section info" style="background-image: url(img/info-bg.jpg);">
 		<div class="container">
 			
 			<h2>Заполните информацию об автомобиле</h2>
 			
-			<form action="">
+			<form action="" class="form">
 				<div>
 					<label for="">Марка автомобиля</label>
-					<select name="hero">
-						<option>Выберите марку</option>
-						<option value="t1">Марка</option>
-						<option value="t2">Марка</option>
-						<option value="t3">Марка</option>
-					</select>
+					<input type="text" name="mark" placeholder="Выберите марку">
 				</div>
 				<div>
 					<label for="">Год выпуска</label>
-					<input type="text" name="yaer" placeholder="2012" required>
+					<input type="text" name="yaer" placeholder="2012">
 				</div>
 				<div>
 					<label for="">Пробег</label>
-					<input type="text" name="km" placeholder="500 000 км." required>
+					<input type="text" name="km" placeholder="500 000 км.">
 				</div>
 				<div>
 					<label for="">Двигатель</label>
-					<input type="text" name="dv" placeholder="500 000 км." required>
+					<input type="text" name="dv" placeholder="500 000 км.">
 				</div>
 				<div>
 					<label for="">Регион использования</label>
-					<input type="text" name="reg" placeholder="Краснодар" required>
+					<input type="text" name="reg" placeholder="Краснодар">
 				</div>
 				<div>
 					<label for="">Коробка передач</label>
 					<select name="hero">
-						<option value="t1">Автомат</option>
-						<option value="t2">Ручна</option>
+						<option value="t1">Автоматическая</option>
+						<option value="t2">Механика</option>
 					</select>
 				</div>
 				<div>
@@ -146,12 +136,14 @@
 					<input type="tel" name="phone" required="" placeholder="Ведите ваш телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="18" aria-required="true">
 				</div>
 				<div>
-					<a href="#" class="header__btn">Рассчитать стоимость</a>
+					<button class="header__btn form__btn" type="submit">Рассчитать стоимость</button>
 				</div>
 
 				<div>
-					<label for="">Нажимая на кнопку "Рассчитать стоимость", вы соглашаетесь с политикой обработки персональных данных</label>
+					<input type="checkbox" class="checkbox" id="calculation__checkbox">
+					<label  for="calculation__checkbox" class="label label__active">Нажимая на кнопку "Рассчитать стоимость", вы соглашаетесь с политикой обработки персональных данных</label>
 				</div>
+
 			</form>
 
 		</div>
@@ -177,7 +169,7 @@
 		</div>
 	</section>
 
-	<section class="section company">
+	<section id="company" class="section company">
 		<div class="container">
 			
 			<h2>Страховые компании</h2>
@@ -239,7 +231,16 @@
 
 		</div>
 	</section>
+	
+	<div class="modal" id="thanks">
+		<button class="close thanks_close" type="button">
+					<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+		<h3>Спасибо за ваше обращение!</h3>
+		<p>Мы уже начали рассчитывать стоимость <br>страховки и свяжемся с вами <br>в ближайшее время.</p>
+	</div>
 
+	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/scripts.min.js"></script>
 
 </body>

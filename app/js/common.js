@@ -1,5 +1,24 @@
 $(function() {
 
+$('.checkbox').on('change', function() {
+  var btn = $('.form');
+  if ( btn.attr('disabled') ){
+    btn.removeAttr("disabled");
+    $('.label').addClass('label__active');
+  }
+  else{
+    btn.attr("disabled", true);
+    $('.label').removeClass('label__active');
+  }
+});
+
+$(".header").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top - 0}, 'slow', 'swing');
+});
+
 //-----------------------------slider-----------------------------
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 5,
@@ -9,11 +28,11 @@ var swiper = new Swiper('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      320: {
+      576: {
         slidesPerView: 1,
         spaceBetween: 10
       },
-      480: {
+      767: {
         slidesPerView: 2,
         spaceBetween: 20
       },
@@ -21,13 +40,14 @@ var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
       }
    }
-  });
+});
+
 //------------------------------гамбургер-----------------------------
-$('.hamburger').click(function() {
+  $('.hamburger').click(function() {
   $(this).toggleClass('hamburger-active');
   $('nav').toggleClass('nav-active');
   $('header').toggleClass('header-menu');
-});
+  });
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
@@ -39,7 +59,7 @@ $('.hamburger').click(function() {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
 	}, "Введите Ваш телефон");
 
-  $(".order-form").validate({
+  $(".form").validate({
     messages: {
       name: "Введите ваше Имя",
       phone: "Введите ваш телефон",
@@ -52,34 +72,11 @@ $('.hamburger').click(function() {
     },
     submitHandler: function(form) {
       var t = {
-        name: jQuery(".order-form").find("input[name=name]").val(),
-        phone: jQuery(".order-form").find("input[name=phone]").val(),
-        number: jQuery(".order-form").find("input[name=number]").val(),
-        product: jQuery(".order-form").find("input[name=product]").val(),
-        subject: jQuery(".order-form").find("input[name=subject]").val()
+        name: jQuery(".form").find("input[name=name]").val(),
+        phone: jQuery(".form").find("input[name=phone]").val(),
+        subject: jQuery(".form").find("input[name=subject]").val()
       };
       ajaxSend('.order-form', t);
-    }
-  });
-
-  $(".consultation-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
-      }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".consultation-form").find("input[name=name]").val(),
-        phone: jQuery(".consultation-form").find("input[name=phone]").val(),
-        subject: jQuery(".consultation-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.consultation-form', t);
     }
   });
 

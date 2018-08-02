@@ -25,6 +25,10 @@
 		&::after
 			top: 10px
 	
+	p
+		br
+			display: none
+			
 	.steps
 		.namber
 			font-size: 80px
@@ -37,15 +41,16 @@
 	.info
 		form
 			div
-				width: 30%
+				width: 47%
 				margin-right: 3%
-	.info
+				&:nth-child(3n)
+					margin-right: 3%
+
 		.header__btn
 			font-size: 19px
 
 	.important
 		background-position: 70% 0
-
 
 @media only screen and (max-width : 767px)
 	h2
@@ -56,12 +61,14 @@
 
 	.header
 		padding-bottom: 80px
-		background-position: 40% 0
+		background-position: 30% 0
 		&__buttons
 			margin-bottom: 50px
+			flex-direction: column
+			align-items: flex-end
 			a
 				&:first-child
-					margin-right: 30px
+					margin-right: 5px
 
 	.section
 		padding: 40px 0
@@ -100,15 +107,68 @@
 			margin-bottom: 30px
 
 @media only screen and (max-width : 576px)
-	.header
+	h2
+		width: 90%
+
+	.steps
+		&__list
+			flex-direction: column
+			align-items: center
+
+	.protection
+		&__item
+			width: 100%
+			&::before
+				display: none
+
+	.info
+		form
+			div
+				width: 100%
+				margin-right: 0
+				&:nth-child(3n)
+					margin-right: 0
+
+	#thanks
+		width: 320px
+		padding: 40px 20px
+		br
+			display: none
+
+		h3
+			font-size: 18px
+			margin-bottom: 20px
+
+		p
+			font-size: 16px
+
+	.info
+		form
+			label
+				font-size: 16px
 
 @media only screen and (max-width : 480px)
+	h1
+		font-size: 28px
+
+	h2
+		font-size: 22px
+	
 	.header
+		p
+			font-size: 16px
 
+	.important
+			background-position: 78% 0
+	.info
+		form
+			div
+				margin-bottom: 20px
 
+@media only screen and (max-width : 380px)
 
-
-
+	.important
+			background-position: 70% 0
 
 
 
