@@ -99,41 +99,41 @@
 			
 			<h2>Заполните информацию об автомобиле</h2>
 			
-			<form action="" class="form">
+			<form action="sendmail.php" class="form">
 				<div>
-					<label for="">Марка автомобиля</label>
-					<input type="text" name="mark" placeholder="Выберите марку">
+					<label for="mark">Марка автомобиля</label>
+					<input id="mark" type="text" name="mark" placeholder="Выберите марку">
 				</div>
 				<div>
-					<label for="">Год выпуска</label>
-					<input type="text" name="yaer" placeholder="2012">
+					<label for="yaer">Год выпуска</label>
+					<input id="yaer" type="text" name="yaer" placeholder="2012">
 				</div>
 				<div>
-					<label for="">Пробег</label>
-					<input type="text" name="km" placeholder="500 000 км.">
+					<label for="km">Пробег</label>
+					<input id="km" type="text" name="km" placeholder="500 000 км.">
 				</div>
 				<div>
-					<label for="">Двигатель</label>
-					<input type="text" name="dv" placeholder="500 000 км.">
+					<label for="dv">Двигатель</label>
+					<input id="dv" type="text" name="dv" placeholder="500 000 км.">
 				</div>
 				<div>
-					<label for="">Регион использования</label>
-					<input type="text" name="reg" placeholder="Краснодар">
+					<label for="reg">Регион использования</label>
+					<input id="reg" type="text" name="reg" placeholder="Краснодар">
 				</div>
 				<div>
-					<label for="">Коробка передач</label>
-					<select name="hero">
+					<label for="hero">Коробка передач</label>
+					<select id="hero" name="hero">
 						<option value="t1">Автоматическая</option>
 						<option value="t2">Механика</option>
 					</select>
 				</div>
 				<div>
-					<label for="">Ваше имя</label>
-					<input type="text" name="name" placeholder="Александр" required>
+					<label for="name">Ваше имя</label>
+					<input id="name" type="text" name="name" placeholder="Александр" required>
 				</div>
 				<div>
-					<label for="">Номер телефона</label>
-					<input type="tel" name="phone" required="" placeholder="Ведите ваш телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="18" aria-required="true">
+					<label for="phone">Номер телефона</label>
+					<input id="phone" type="tel" name="phone" required="" placeholder="Ведите ваш телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" maxlength="18" aria-required="true">
 				</div>
 				<div>
 					<button class="header__btn form__btn" type="submit">Рассчитать стоимость</button>
